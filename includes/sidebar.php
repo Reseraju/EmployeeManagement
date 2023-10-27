@@ -60,8 +60,8 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="add-scdetails.php">Add Employee</a></li>
-                <li class="nav-item"> <a class="nav-link" href="manage-scdetails.php">Manage Employee</a></li>
+                <li class="nav-item"> <a class="nav-link" href="add-empdetails.php">Add Employee</a></li>
+                <li class="nav-item"> <a class="nav-link" href="manage-empdetails.php">Manage Employee</a></li>
               </ul>
             </div>
           </li>

@@ -6,32 +6,15 @@ if (strlen($_SESSION['aid']==0)) {
   } else{
 if(isset($_POST['submit']))
 {
-$namesc=$_POST['namesc'];
-$dob=$_POST['dob'];
+$nameemp=$_POST['nameemp'];
+$email=$_POST['email'];
+$phoneNo=$_POST['phoneNo'];
+$doj=$_POST['doj'];
+$exp=$_POST['exp'];
 
-$contnum=$_POST['contnum'];
-$commadd=$_POST['commadd'];
-$emeradd=$_POST['emeradd'];
-$emercontnum=$_POST['emercontnum'];
-$addedby='admin';
-$regnum=mt_rand(100000000, 999999999);
-$propic=$_FILES["propic"]["name"];
-$extension = substr($propic,strlen($propic)-4,strlen($propic));
-$allowed_extensions = array(".jpg","jpeg",".png",".gif");
-if(!in_array($extension,$allowed_extensions))
-{
-echo "<script>alert('Profile Pics has Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
-}
-else
-{
-
-$propic=md5($propic).time().$extension;
- move_uploaded_file($_FILES["propic"]["tmp_name"],"images/".$propic);
-$sql=mysqli_query($con,"insert into tblseniorcitizen(RegistrationNumber,Name,DateofBirth,ContactNumber,CommunicationAddress,ProfilePic,EmergencyAddress,EmergencyContactnumber,AddedBy) values('$regnum','$namesc','$dob','$contnum','$commadd','$propic','$emeradd','$emercontnum','$addedby')");
-echo "<script>alert('Detail of senior citizen has been added successfully');</script>";
-echo "<script>window.location.href='add-scdetails.php'</script>";
-
-}
+$sql=mysqli_query($con,"insert into empdetails(name,email,phoneNo,doj,exp) values('$nameemp','$email','$phoneNo','$doj','$exp')");
+echo "<script>alert('Detail of employee has been added successfully');</script>";
+echo "<script>window.location.href='add-empdetails.php'</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -39,7 +22,7 @@ echo "<script>window.location.href='add-scdetails.php'</script>";
 
 <head>
   
-  <title>Old Age Home Management System || Add Senior Details</title>
+  <title>Employee Management System || Add Employee Details</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -87,43 +70,37 @@ echo "<script>window.location.href='add-scdetails.php'</script>";
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Add Senior Citizen</h4>
+                  <h4 class="card-title">Add Employee</h4>
                   <p class="card-description">
-                    Add Senior Citizen Detail!!!
+                    Add Employee Details!!!
                   </p>
                   <form class="forms-sample" method="post" enctype="multipart/form-data">
                     
                     <div class="form-group">
-                       <label for="exampleInputUsername1">Name of Senior Citizen</label>
-                      <input id="namesc" name="namesc" type="text" class="form-control" required="true" value="">
+                       <label for="exampleInputUsername1">Name of Employee</label>
+                      <input id="namesc" name="nameemp" type="text" class="form-control" required="true" value="">
                     </div>
                   <div class="form-group">
-                      <label for="exampleInputEmail1">Date of Birth</label>
-                     <input id="dob" name="dob" type="date" class="form-control" required="true" max="1970-01-01">
+                      <label for="exampleInputEmail1">Email of Employee</label>
+                     <input id="dob" name="email" type="email" class="form-control" required="true">
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">Contact Number</label>
-                     <input id="contnum" name="contnum" type="text" pattern="[0-9]+" maxlength="10" class="form-control" required="true" value="">
+                     <input id="contnum" name="phoneNo" type="text" pattern="[0-9]+" maxlength="10" class="form-control" required="true" value="">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Communication Address</label>
-                     <textarea class="form-control" id="commadd" name="commadd" rows="5"></textarea>
+                      <label for="exampleInputEmail1">Date of Joining</label>
+                    <input id="dob" name="doj" type="Date" class="form-control" required="true">
                      
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Profile Pic</label>
-                     <input id="propic" name="propic" type="file" class="form-control" required="true" value="">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Emergency Address</label>
                     
-                     <textarea class="form-control" id="emeradd" name="emeradd" rows="5"></textarea>
-                    </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Emergency Contact Number</label>
-                     <input id="emercontnum" name="emercontnum" pattern="[0-9]+" maxlength="10" type="text" class="form-control" required="true" value="">
+                      <label for="exampleInputEmail1">Years of Experience</label>
+                    <input id="dob" name="exp" type="number" class="form-control" required="true">
+                     
                     </div>
+                  
                     <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
                   </form>
                 </div>

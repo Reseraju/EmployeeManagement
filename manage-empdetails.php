@@ -66,12 +66,11 @@ echo "<script>window.location.href='manage-empdetails.php'</script>";
                     <thead>
                       <tr>
                         <th class="ml-5">#</th>
-                        <th>Registration Number</th>
                         <th>Name</th>
+                        <th>Email</th>
                         <th>Contact Number</th>
-                        <th>Date of Birth</th>
-                        <th>Added By</th>
-                        <th>Registration Date</th>
+                        <th>Date of Joining</th>
+                        <th>Years of Experience</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
@@ -85,12 +84,11 @@ while($row=mysqli_fetch_array($query))
                       <tr>
 
                         <td><?php echo htmlentities($cnt);?></td>
-                        <td><?php echo htmlentities($row['RegistrationNumber']);?> </td>
-                        <td><?php echo htmlentities($row['Name']);?> </td>
-                        <td><?php echo htmlentities($row['ContactNumber']);?> </td>
-                        <td><?php echo htmlentities($row['DateofBirth']);?> </td>
-                        <td><?php echo htmlentities($row['AddedBy']);?> </td>
-                        <td><?php echo htmlentities($row['RegitrationDate']);?></td>
+                        <td><?php echo htmlentities($row['name']);?> </td>
+                        <td><?php echo htmlentities($row['email']);?> </td>
+                        <td><?php echo htmlentities($row['phoneNo']);?> </td>
+                        <td><?php echo htmlentities($row['doj']);?> </td>
+                        <td><?php echo htmlentities($row['exp']);?></td>
                       
                         
                         <td>

@@ -6,16 +6,15 @@ if (strlen($_SESSION['aid']==0)) {
   } else{
 if(isset($_POST['submit']))
 {
-$namesc=$_POST['namesc'];
-$dob=$_POST['dob'];
-$contnum=$_POST['contnum'];
-$commadd=$_POST['commadd'];
-$emeradd=$_POST['emeradd'];
-$emercontnum=$_POST['emercontnum'];
-$id=intval($_GET['id']);
-$sql=mysqli_query($con,"update tblseniorcitizen set Name='$namesc',DateofBirth='$dob', ContactNumber='$contnum',CommunicationAddress='$commadd',EmergencyAddress='$emeradd',EmergencyContactnumber='$emercontnum' where ID='$id'");
-echo "<script>alert('Senior citizen detail has been updated successfully');</script>";
-echo "<script>window.location.href='manage-scdetails.php'</script>";
+  $nameemp=$_POST['nameemp'];
+  $email=$_POST['email'];
+  $phoneNo=$_POST['phoneNo'];
+  $doj=$_POST['doj'];
+  $exp=$_POST['exp'];
+  $id=intval($_GET['name']);
+  $sql=mysqli_query($con,"update empdetails set name='$nameemp',email='$email', phoneNo='$phoneNo',doj='$doj',exp='$exp' where empId='$id'");
+  echo "<script>alert('Senior citizen detail has been updated successfully');</script>";
+  echo "<script>window.location.href='manage-scdetails.php'</script>";
 
 }
 ?>
@@ -24,7 +23,7 @@ echo "<script>window.location.href='manage-scdetails.php'</script>";
 
 <head>
   
-  <title>Old Age Home Management System || Update Services</title>
+  <title>Employee Management System || Update Employee</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -72,51 +71,42 @@ echo "<script>window.location.href='manage-scdetails.php'</script>";
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Update Senior Citizen Details</h4>
+                  <h4 class="card-title">Update Employee Details</h4>
                   <p class="card-description">
-                    Update Senior Citizen Details of old age home!!!
+                    Update Employee Details!!!
                   </p>
                   <form class="forms-sample" method="post">
                     <?php
-                    $id=intval($_GET['id']);
-                         $query=mysqli_query($con,"select * from tblseniorcitizen where tblseniorcitizen.ID='$id'");
+                    $id=intval($_GET['name']);
+                         $query=mysqli_query($con,"select * from empdetails where empdetails.empId='$id'");
 
 while($row=mysqli_fetch_array($query))
 {
 ?>
                     <div class="form-group">
-                       <label for="exampleInputUsername1">Name of Senior Citizen</label>
-                      <input id="namesc" name="namesc" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['Name']);?>">
+                       <label for="exampleInputUsername1">Name of Employee</label>
+                      <input id="namesc" name="nameemp" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['name']);?>">
                     </div>
                   <div class="form-group">
-                      <label for="exampleInputEmail1">Date of Birth</label>
-                     <input id="dob" name="dob" type="date" class="form-control" required="true" value="<?php echo htmlentities($row['DateofBirth']);?>">
+                      <label for="exampleInputEmail1">Email of Employee</label>
+                     <input id="dob" name="email" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['email']);?>">
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">Contact Number</label>
-                     <input id="contnum" name="contnum" type="text" pattern="[0-9]+" maxlength="10" class="form-control" required="true" value="<?php echo htmlentities($row['ContactNumber']);?>">
+                     <input id="contnum" name="phoneNo" type="text" pattern="[0-9]+" maxlength="10" class="form-control" required="true" value="<?php echo htmlentities($row['phoneNo']);?>">
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Communication Address</label>
-                     <textarea class="form-control" id="commadd" name="commadd" rows="5"><?php echo htmlentities($row['CommunicationAddress']);?></textarea>
-                     
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Profile Pic</label>
-                     
-                      <img src="images/<?php echo htmlentities($row['ProfilePic']);?>" width="250">
-    <a href="change-image.php?id=<?php echo $row['ID'];?>">Change Image</a>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Emergency Address</label>
                     
-                     <textarea class="form-control" id="emeradd" name="emeradd" rows="5"><?php echo htmlentities($row['EmergencyAddress']);?></textarea>
-                    </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Emergency Contact Number</label>
-                     <input id="emercontnum" name="emercontnum" pattern="[0-9]+" maxlength="10" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['EmergencyContactnumber']);?>">
+                      <label for="exampleInputEmail1">Date of Joining</label>
+                     <input id="dob" name="doj" type="Date" class="form-control" required="true" value="<?php echo htmlentities($row['doj']);?>">
                     </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Years of Experience</label>
+                     <input id="dob" name="exp" type="number" class="form-control" required="true" value="<?php echo htmlentities($row['exp']);?>">
+                    </div>
+                    
                     <?php } ?>
                     <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
                   </form>
