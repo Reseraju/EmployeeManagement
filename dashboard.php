@@ -57,16 +57,16 @@ else{ ?>
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
                     <div>
-                      <?php $query1=mysqli_query($con,"select ID from tblservices");
-$totservices=mysqli_num_rows($query1);
+                      <?php $query1=mysqli_query($con,"select ID from category");
+$totcategory=mysqli_num_rows($query1);
 ?>
-                      <h5 class="mb-0" style="color: blue;">Total Services</h5>
-                      <h1 class="mb-0"><?php echo $totservices;?></h1>
+                      <h5 class="mb-0" style="color: blue;">Total Category</h5>
+                      <h1 class="mb-0"><?php echo $totcategory;?></h1>
                     </div>
                     <i class="typcn typcn-briefcase icon-xl text-secondary"></i>
                   </div>
                   
-                  <a href="manage-services.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  <a href="manage-category.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
               </div>
             </div>
@@ -75,19 +75,19 @@ $totservices=mysqli_num_rows($query1);
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
                     <div>
-                       <?php $query2=mysqli_query($con,"select ID from tblseniorcitizen");
-$totsccount=mysqli_num_rows($query2);
+                       <?php $query2=mysqli_query($con,"select empId from empdetails");
+$totempcount=mysqli_num_rows($query2);
 ?>
-                      <h5 class="mb-0" style="color: blue;">Senior Citizen</h5>
-                      <h1 class="mb-0"><?php echo $totsccount;?></h1>
+                      <h5 class="mb-0" style="color: blue;">Employees</h5>
+                      <h1 class="mb-0"><?php echo $totempcount;?></h1>
                     </div>
                     <i class="typcn typcn-user icon-xl text-secondary"></i>
                   </div>
-                  <a href="manage-scdetails.php" class="small-box-footer">More info <i class="fas fa-users-circle-right"></i></a>
+                  <a href="manage-empdetails.php" class="small-box-footer">More info <i class="fas fa-users-circle-right"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 grid-margin stretch-card">
+            <!-- <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
@@ -103,8 +103,8 @@ $totunreadenq=mysqli_num_rows($query3);
                   <a href="unreadenq.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 grid-margin stretch-card">
+            </div> -->
+            <!-- <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
@@ -122,7 +122,7 @@ $totunreadenq=mysqli_num_rows($query3);
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <?php include_once('includes/footer.php');?>

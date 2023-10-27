@@ -28,7 +28,7 @@ $pagedes=$_POST['pagedes'];
 
 <head>
   
-  <title>Old Age Home Management System || Rules Page</title>
+  <title>Employee Management System || Rules Page</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">

@@ -24,49 +24,56 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="typcn typcn-document-text menu-icon"></i>
-              <span class="menu-title">Manage Employees</span>
+              <span class="menu-title">Pages</span>
               <i class="menu-arrow"></i>
             </a>
-          </li>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="aboutus.php">About Us</a></li>
+                <li class="nav-item"> <a class="nav-link" href="contactus.php">Contact Us</a></li>
+                <li class="nav-item"> <a class="nav-link" href="rules.php">Rules</a></li>
+                <li class="nav-item"> <a class="nav-link" href="eligibility.php">Eligibility</a></li>
+              </ul>
+            </div>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="typcn typcn-film menu-icon"></i>
-              <span class="menu-title">category</span>
+              <span class="menu-title">Category</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="add-services.php">Add category</a></li>
-                <li class="nav-item"><a class="nav-link" href="manage-services.php">Manage category</a></li>
+                <li class="nav-item"><a class="nav-link" href="add-category.php">Add Category</a></li>
+                <li class="nav-item"><a class="nav-link" href="manage-category.php">Manage Category</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <i class="typcn typcn-user menu-icon"></i>
-              <span class="menu-title">Profile</span>
+              <span class="menu-title">Employee</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="add-scdetails.php">Add Details</a></li>
-                <li class="nav-item"> <a class="nav-link" href="manage-scdetails.php">Manage Details</a></li>
+                <li class="nav-item"> <a class="nav-link" href="add-scdetails.php">Add Employee</a></li>
+                <li class="nav-item"> <a class="nav-link" href="manage-scdetails.php">Manage Employee</a></li>
               </ul>
             </div>
           </li>
           <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="typcn typcn-film menu-icon"></i>
-              <span class="menu-title">Enquiry</span>
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="typcn typcn-th-small-outline menu-icon"></i>
+              <span class="menu-title">Reports</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="form-elements">
+            <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="unreadenq.php">Unread Enquiry</a></li>
-                <li class="nav-item"><a class="nav-link" href="readenq.php">Read Enquiry</a></li>
+                <li class="nav-item"> <a class="nav-link" href="between-datesreport.php">B/W dates Report</a></li>
               </ul>
             </div>
           </li> -->
@@ -76,7 +83,5 @@
               <span class="menu-title">Logout</span>
             </a>
           </li>
-         
-          
         </ul>
       </nav>

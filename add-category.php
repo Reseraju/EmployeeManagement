@@ -6,9 +6,9 @@ if (strlen($_SESSION['aid']==0)) {
   } else{
 if(isset($_POST['submit']))
 {
-$sertitle=$_POST['sertitle'];
-$serdes=$_POST['serdes'];
-$sql=mysqli_query($con,"insert into tblservices(ServiceTitle,ServiceDescription) values('$sertitle','$serdes')");
+$cattitle=$_POST['cattitle'];
+$catdes=$_POST['catdes'];
+$sql=mysqli_query($con,"insert into category(CategoryTitle,CategoryDescription) values('$cattitle','$catdes')");
 echo "<script>alert('Services of old age has been added successfully');</script>";
 echo "<script>window.location.href='add-services.php'</script>";
 
@@ -20,7 +20,7 @@ echo "<script>window.location.href='add-services.php'</script>";
 
 <head>
   
-  <title>Old Age Home Management System || Add Services</title>
+  <title>Employee Management System || Add Category</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -68,19 +68,19 @@ echo "<script>window.location.href='add-services.php'</script>";
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Add Services</h4>
+                  <h4 class="card-title">Add Category</h4>
                   <p class="card-description">
-                    Add services of old age home!!!
+                    Add categories of old age home!!!
                   </p>
                   <form class="forms-sample" method="post">
                     
                     <div class="form-group">
-                       <label for="exampleInputUsername1">Service Title</label>
-                      <input id="sertitle" name="sertitle" type="text" class="form-control" required="true" value="">
+                       <label for="exampleInputUsername1">category Title</label>
+                      <input id="cattitle" name="cattitle" type="text" class="form-control" required="true" value="">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Service Description</label>
-                      <textarea class="form-control" name="serdes" id="serdes" rows="5"></textarea>
+                      <label for="exampleInputEmail1">Category Description</label>
+                      <textarea class="form-control" name="catdes" id="catdes" rows="5"></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
