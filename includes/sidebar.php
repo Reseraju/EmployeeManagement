@@ -27,35 +27,27 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="typcn typcn-document-text menu-icon"></i>
-              <span class="menu-title">Pages</span>
+              <span class="menu-title">Manage Employees</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="aboutus.php">About Us</a></li>
-                <li class="nav-item"> <a class="nav-link" href="contactus.php">Contact Us</a></li>
-                <li class="nav-item"> <a class="nav-link" href="rules.php">Rules</a></li>
-                <li class="nav-item"> <a class="nav-link" href="eligibility.php">Eligibility</a></li>
-              </ul>
-            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="typcn typcn-film menu-icon"></i>
-              <span class="menu-title">Services</span>
+              <span class="menu-title">category</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="add-services.php">Add Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="manage-services.php">Manage Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="add-services.php">Add category</a></li>
+                <li class="nav-item"><a class="nav-link" href="manage-services.php">Manage category</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <i class="typcn typcn-user menu-icon"></i>
-              <span class="menu-title">SC Details</span>
+              <span class="menu-title">Profile</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="charts">
@@ -65,7 +57,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="typcn typcn-film menu-icon"></i>
               <span class="menu-title">Enquiry</span>
@@ -77,23 +69,11 @@
                 <li class="nav-item"><a class="nav-link" href="readenq.php">Read Enquiry</a></li>
               </ul>
             </div>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="typcn typcn-th-small-outline menu-icon"></i>
-              <span class="menu-title">Reports</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="tables">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="between-datesreport.php">B/W dates Report</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="search.php">
+            <a class="nav-link" href="logout.php">
               <i class="typcn typcn-mortar-board menu-icon"></i>
-              <span class="menu-title">Search</span>
+              <span class="menu-title">Logout</span>
             </a>
           </li>
          

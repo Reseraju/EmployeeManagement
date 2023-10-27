@@ -16,7 +16,7 @@
               <img src="images/faces/face5.jpg" alt="profile"/>
               <?php
 $adid=$_SESSION['aid'];
-$ret=mysqli_query($con,"select AdminName from tbladmin where ID='$adid'");
+$ret=mysqli_query($con,"select AdminName from admin where ID='$adid'");
 $row=mysqli_fetch_array($ret);
 $name=$row['AdminName'];
 

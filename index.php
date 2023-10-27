@@ -5,8 +5,8 @@ include("includes/config.php");
 if(isset($_POST['submit']))
 {
 $username=$_POST['username'];
-$password=md5($_POST['password']);
-$ret=mysqli_query($con,"SELECT ID FROM tbladmin WHERE UserName='$username' and Password='$password'");
+$password=$_POST['password'];
+$ret=mysqli_query($con,"SELECT ID FROM admin WHERE username='$username' and password='$password'");
 $num=mysqli_fetch_array($ret);
 if($num>0)
 {
@@ -30,7 +30,7 @@ setcookie ("userpassword","");
 header("location:dashboard.php");
 }else{
 echo "<script>alert('Invalid username or password');</script>";
-header("location:login.php");
+header("location:index.php");
 }
 }
 ?>

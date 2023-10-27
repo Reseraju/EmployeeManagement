@@ -12,7 +12,7 @@ else{ ?>
 
 <head>
   
-  <title>Old Age Home Management System|| Dashboard</title>
+  <title>Employee Management System|| Dashboard</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -110,7 +110,7 @@ $totunreadenq=mysqli_num_rows($query3);
                   <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
                     <div>
                       <?php $query4=mysqli_query($con,"select ID from tblcontact where IsRead='1'");
-$totreadenq=mysqli_num_rows($query4);
+                      $totreadenq=mysqli_num_rows($query4);
 ?>
                       <h5 class="mb-0" style="color: blue;">Read Enquiry</h5>
                       <h1 class="mb-0"><?php echo $totreadenq;?></h1>
