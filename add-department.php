@@ -71,7 +71,7 @@ echo "<script>window.location.href='add-services.php'</script>";
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Add Department</h4>
-                  <p class="card-description">F
+                  <p class="card-description">
                     Add Departments!!!
                   </p>
                   <form class="forms-sample" method="post">

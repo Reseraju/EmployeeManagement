@@ -8,12 +8,12 @@ if (strlen($_SESSION['aid']==0)) {
     if(isset($_POST['submit']))
 {
 $adminid=$_SESSION['aid'];
-$cpassword=md5($_POST['currentpassword']);
-$newpassword=md5($_POST['newpassword']);
-$query=mysqli_query($con,"select ID from tbladmin where ID='$adminid' and   Password='$cpassword'");
+$cpassword=$_POST['currentpassword'];
+$newpassword=$_POST['newpassword'];
+$query=mysqli_query($con,"select ID from admin where ID='$adminid' and   Password='$cpassword'");
 $row=mysqli_fetch_array($query);
 if($row>0){
-$ret=mysqli_query($con,"update tbladmin set Password='$newpassword' where ID='$adminid'");
+$ret=mysqli_query($con,"update admin set Password='$newpassword' where ID='$adminid'");
 
 echo '<script>alert("Your password successully changed.")</script>';
 } else {
@@ -28,7 +28,7 @@ echo '<script>alert("Your current password is wrong.")</script>';
 
 <head>
   
-  <title>Old Age Home Management System || Profile</title>
+  <title>Employee Management System || Profile</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">

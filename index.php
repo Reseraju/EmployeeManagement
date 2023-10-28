@@ -78,7 +78,6 @@ header("location:index.php");
                   </div>
                   <a href="forgot-password.php" class="auth-link text-black">Forgot password?</a>
                 </div>
-               <a href="../index.php" class="auth-link text-black">Home Page!!!</a>
               </form>
             </div>
           </div>

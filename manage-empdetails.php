@@ -3,11 +3,11 @@ error_reporting(0);
 include_once('includes/config.php');
 
 if($_GET['del']){
-$empid=$_GET['id'];
-mysqli_query($con,"delete from empdetails where ID ='$empid'");
-echo "<script>alert('Data Deleted');</script>";
-echo "<script>window.location.href='manage-empdetails.php'</script>";
-          }
+    $empid=$_GET['id'];
+    mysqli_query($con,"delete from empdetails where ID ='$empid'");
+    echo "<script>alert('Data Deleted');</script>";
+    echo "<script>window.location.href='manage-empdetails.php'</script>";
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">

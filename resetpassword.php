@@ -8,9 +8,9 @@ if(isset($_POST['submit']))
   {
     $contactno=$_SESSION['contactno'];
     $email=$_SESSION['email'];
-    $password=md5($_POST['newpassword']);
+    $password=$_POST['newpassword'];
 
-        $query=mysqli_query($con,"update tbladmin set Password='$password'  where  Email='$email' && MobileNumber='$contactno' ");
+        $query=mysqli_query($con,"update admin set Password='$password'  where  Email='$email' && MobileNumber='$contactno' ");
    if($query)
    {
 echo "<script>alert('Password successfully changed');</script>";
@@ -24,7 +24,7 @@ session_destroy();
 
 <head>
   
-  <title>Old Age Home Management System || Reset Password Page</title>
+  <title>Employee Management System || Reset Password Page</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -53,7 +53,7 @@ return true;
         <div class="row w-100 mx-0">
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-              <h3 style="color:seagreen;">OAHMS</h3>
+              <h3 style="color:seagreen;">EMS</h3>
               <h4>Forgot Password</h4>
               <h6 class="font-weight-light">Reset your password.</h6>
               <form class="pt-3" method="post" name="changepassword" onsubmit="return checkpass();">

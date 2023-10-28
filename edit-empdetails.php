@@ -11,10 +11,10 @@ if(isset($_POST['submit']))
   $phoneNo=$_POST['phoneNo'];
   $doj=$_POST['doj'];
   $exp=$_POST['exp'];
-  $id=intval($_GET['name']);
+  $id=intval($_GET['id']);
   $sql=mysqli_query($con,"update empdetails set name='$nameemp',email='$email', phoneNo='$phoneNo',doj='$doj',exp='$exp' where empId='$id'");
-  echo "<script>alert('Senior citizen detail has been updated successfully');</script>";
-  echo "<script>window.location.href='manage-scdetails.php'</script>";
+  echo "<script>alert('Employee details has been updated successfully');</script>";
+  echo "<script>window.location.href='manage-empdetails.php'</script>";
 
 }
 ?>
@@ -77,7 +77,7 @@ if(isset($_POST['submit']))
                   </p>
                   <form class="forms-sample" method="post">
                     <?php
-                    $id=intval($_GET['name']);
+                    $id=intval($_GET['id']);
                          $query=mysqli_query($con,"select * from empdetails where empdetails.empId='$id'");
 
 while($row=mysqli_fetch_array($query))
@@ -106,6 +106,7 @@ while($row=mysqli_fetch_array($query))
                       <label for="exampleInputEmail1">Years of Experience</label>
                      <input id="dob" name="exp" type="number" class="form-control" required="true" value="<?php echo htmlentities($row['exp']);?>">
                     </div>
+                    
                     
                     <?php } ?>
                     <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
