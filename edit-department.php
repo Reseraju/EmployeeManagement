@@ -6,10 +6,11 @@ if (strlen($_SESSION['aid']==0)) {
   } else{
 if(isset($_POST['submit']))
 {
-$sertitle=$_POST['sertitle'];
-$serdes=$_POST['serdes'];
+$deptName=$_POST['deptName'];
+$location=$_POST['location'];
+$managerId=$_POST['managerId'];
 $id=intval($_GET['id']);
-$sql=mysqli_query($con,"update tblservices set ServiceTitle='$sertitle',ServiceDescription='$serdes' where ID='$id'");
+$sql=mysqli_query($con,"update department set deptName='$deptName',location='$location',managerId='$managerId' where departmentID='$id'");
 echo "<script>alert('Service detail has been updated successfully');</script>";
 echo "<script>window.location.href='manage-services.php'</script>";
 
@@ -20,7 +21,7 @@ echo "<script>window.location.href='manage-services.php'</script>";
 
 <head>
   
-  <title>Old Age Home Management System || Update Services</title>
+  <title>Employee Management System || Update Departments</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -68,25 +69,28 @@ echo "<script>window.location.href='manage-services.php'</script>";
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Update Services</h4>
+                  <h4 class="card-title">Update Departments</h4>
                   <p class="card-description">
-                    Update services of old age home!!!
+                    Update Department!!!
                   </p>
-                  <form class="forms-sample" method="post">
+                  <form class="forms-sample" method="post" action="">
                     <?php
                     $id=intval($_GET['id']);
-                         $query=mysqli_query($con,"select * from tblservices where tblservices.ID='$id'");
-
+                         $query=mysqli_query($con,"select * from department where departmentID='$id'");
 while($row=mysqli_fetch_array($query))
 {
 ?>
                     <div class="form-group">
-                       <label for="exampleInputUsername1">Service Title</label>
-                      <input id="sertitle" name="sertitle" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['ServiceTitle']);?>">
+                       <label for="exampleInputUsername1">Department Title</label>
+                      <input id="sertitle" name="deptName" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['deptName']);?>">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Service Description</label>
-                      <textarea class="form-control" name="serdes" id="serdes" rows="5"><?php echo htmlentities($row['ServiceDescription']);?></textarea>
+                       <label for="exampleInputUsername1">Location</label>
+                      <input id="sertitle" name="location" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['location']);?>">
+                    </div>
+                    <div class="form-group">
+                       <label for="exampleInputUsername1">Manager ID</label>
+                      <input id="sertitle" name="managerId" type="text" class="form-control" required="true" value="<?php echo htmlentities($row['managerId']);?>">
                     </div>
                     <?php } ?>
                     <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>

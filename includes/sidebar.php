@@ -42,13 +42,13 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="typcn typcn-film menu-icon"></i>
-              <span class="menu-title">Category</span>
+              <span class="menu-title">Department</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="add-category.php">Add Category</a></li>
-                <li class="nav-item"><a class="nav-link" href="manage-category.php">Manage Category</a></li>
+                <li class="nav-item"><a class="nav-link" href="add-department.php">Add Department</a></li>
+                <li class="nav-item"><a class="nav-link" href="manage-department.php">Manage Department</a></li>
               </ul>
             </div>
           </li>

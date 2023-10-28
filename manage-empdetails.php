@@ -71,6 +71,7 @@ echo "<script>window.location.href='manage-empdetails.php'</script>";
                         <th>Contact Number</th>
                         <th>Date of Joining</th>
                         <th>Years of Experience</th>
+                        <th>Department Assigned</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
@@ -89,12 +90,15 @@ while($row=mysqli_fetch_array($query))
                         <td><?php echo htmlentities($row['phoneNo']);?> </td>
                         <td><?php echo htmlentities($row['doj']);?> </td>
                         <td><?php echo htmlentities($row['exp']);?></td>
+                        <td><?php echo htmlentities($row['deptAssigned']);?></td>
                       
                         
                         <td>
                           <div class="d-flex align-items-center">
                             <a href="edit-empdetails.php?id=<?php echo $row['ID']?>" class="btn btn-success btn-sm btn-icon-text mr-3">Edit <i class="typcn typcn-edit btn-icon-append"></i> </a> 
-                                            <a href="manage-empdetails.php?id=<?php echo $row['ID']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm btn-icon-text">Delete <i class="typcn typcn-delete-outline btn-icon-append"></i></a>
+                            &nbsp;&nbsp;&nbsp;    <a href="assign-department.php?id=<?php echo $row['ID']?>" class="btn btn-success btn-sm btn-icon-text mr-3">Assign Department <i class="typcn typcn-edit btn-icon-append"></i> </a> 
+                                            <a href="manage-empdetails.php?id=<?php echo $row['ID']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm btn-icon-text">Delete <i class="typcn typcn-delete-outline btn-icon-append"></i>  </a>
+                                            
                           </div>
                         </td>
                       </tr><?php $cnt=$cnt+1; } ?>

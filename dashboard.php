@@ -57,16 +57,16 @@ else{ ?>
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
                     <div>
-                      <?php $query1=mysqli_query($con,"select ID from category");
-$totcategory=mysqli_num_rows($query1);
+                      <?php $query1=mysqli_query($con,"select departmentID from department");
+$totdepartment=mysqli_num_rows($query1);
 ?>
-                      <h5 class="mb-0" style="color: blue;">Total Category</h5>
-                      <h1 class="mb-0"><?php echo $totcategory;?></h1>
+                      <h5 class="mb-0" style="color: blue;">Total department</h5>
+                      <h1 class="mb-0"><?php echo $totdepartment;?></h1>
                     </div>
                     <i class="typcn typcn-briefcase icon-xl text-secondary"></i>
                   </div>
                   
-                  <a href="manage-category.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  <a href="manage-department.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@ $totcategory=mysqli_num_rows($query1);
                        <?php $query2=mysqli_query($con,"select empId from empdetails");
 $totempcount=mysqli_num_rows($query2);
 ?>
-                      <h5 class="mb-0" style="color: blue;">Employees</h5>
+                      <h5 class="mb-0" style="color: blue;">Total Employees</h5>
                       <h1 class="mb-0"><?php echo $totempcount;?></h1>
                     </div>
                     <i class="typcn typcn-user icon-xl text-secondary"></i>
